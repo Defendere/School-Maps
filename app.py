@@ -1,17 +1,15 @@
 import cherrypy
 
-
+image.png
 class Point:
     def init(self, x, y):
         self.x = x
         self.y = y
 
-class Square:
-    def init(self, ):
-        ...
 
+#  the block will be highlighted with an outline. each block will have its own highlight color
 class block:
-    def init(self, p1, p2, p3, p4, color):
+    def init(self, p1, p2, p3, p4, color, name):
         self.p1 = p1
         self.p2 = p2
         self.p3 = p3
@@ -19,15 +17,16 @@ class block:
         self.color = color
 
 class Classroom:
-    def __init__(self, p1, p2, p3, p4, block):
+    def __init__(self, z, p1, p2, p3, p4, block, name):
         self.p1 = p1
         self.p2 = p2
         self.p3 = p3
         self.p4 = p4
+        self.z = z # z tells you what floor the classroom is on. ground level is 0
         self.block = block
 
 
-class HelloWorld(object):
+class app_main(object):
     
     @cherrypy.expose
     def index(self):
@@ -36,4 +35,4 @@ class HelloWorld(object):
 
 
 if __name__ == '__main__':
-    cherrypy.quickstart(HelloWorld())
+    cherrypy.quickstart(app_main())

@@ -8,6 +8,7 @@
         "statusBarItem.remoteForeground": "#e7e7e7"
     },
     "cSpell.words": [
-        "Actix"
+        "Actix",
+        "cherrypy"
     ]
 }
