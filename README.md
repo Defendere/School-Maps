@@ -21,7 +21,7 @@ has web assembly
 <pre>
 
 
-         a line shows the shortest path betwene the 2 points
+         a line shows the shortest path between the 2 points
                │
                │
              ┌─┼───────────────────────────────────────────┐
