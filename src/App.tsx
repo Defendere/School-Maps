@@ -105,9 +105,7 @@ function App() {
     pos3 = e.clientX;
     pos4 = e.clientY;
     // set the element's new position:
-
-    offset.x = offset.x - pos2
-    offset.y = offset.y - pos1
+    setOffset({x:offset.x - pos2, y:offset.y - pos1})
   }
 
   function closeDragElement() {
@@ -118,7 +116,7 @@ function App() {
 
   return (
     <div  className="App">
-      <Map id="mapContainer" style={{position: "absolute", top: offset.x, left: offset.y}} startNode={startNode} endNode={endNode} />
+      <Map id="mapContainer" style={{position: "absolute", top: offset.x +"px", left: offset.y+"px", outline: "1px solid"}} startNode={startNode} endNode={endNode} />
     </div>
   )
 
